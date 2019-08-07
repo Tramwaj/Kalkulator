@@ -1,0 +1,77 @@
+﻿<Window x:Class="Kalkulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kalkulator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="300">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+          
+         </Grid.RowDefinitions>
+
+        <TextBlock Text="Pierwsza" FontSize="18" 
+                   Grid.ColumnSpan="2" 
+                   TextAlignment="Center" VerticalAlignment="Center" Margin="30,0"/>
+
+        <TextBlock Text="Druga" FontSize="18" 
+                   Grid.Column="2" Grid.ColumnSpan="2"
+                   TextAlignment="Center" VerticalAlignment="Center" Margin="30,0"/>
+
+        <TextBlock Text="Wynik" FontSize="25" 
+                   Grid.Row="1" Grid.ColumnSpan="4" 
+                   TextAlignment="Right" VerticalAlignment="Center" Margin="10,0"/>
+        
+        <Button Grid.Row="2" Grid.Column="0" x:Name="Over" Content="/" 
+               FontSize="32" />
+        
+        <Button Grid.Row="2" Grid.Column="1" x:Name="Seven" Content="7" 
+               FontSize="32" Click="Seven_Click" />
+        <Button Grid.Row="2" Grid.Column="2" x:Name="Eight" Content="8" 
+               FontSize="32" />
+        <Button Grid.Row="2" Grid.Column="3" x:Name="Nine" Content="9" 
+               FontSize="32" />
+        
+        <Button Grid.Row="3" Grid.Column="0" x:Name="Times" Content="*" 
+               FontSize="32" />
+        <Button Grid.Row="3" Grid.Column="1" x:Name="Four" Content="6" 
+               FontSize="32" />
+        <Button Grid.Row="3" Grid.Column="2" x:Name="Five" Content="5" 
+               FontSize="32" />
+        <Button Grid.Row="3" Grid.Column="3" x:Name="Six" Content="4" 
+               FontSize="32" />
+
+        <Button Grid.Row="4" Grid.Column="0" x:Name="Minus" Content="-" 
+               FontSize="32" />
+        <Button Grid.Row="4" Grid.Column="1" x:Name="One" Content="3" 
+               FontSize="32" />
+        <Button Grid.Row="4" Grid.Column="2" x:Name="Two" Content="2" 
+               FontSize="32" />
+        <Button Grid.Row="4" Grid.Column="3" x:Name="Three" Content="1" 
+               FontSize="32" />
+
+        <Button Grid.Row="5" Grid.Column="0" x:Name="Plus" Content="+" 
+               FontSize="32" />
+        <Button Grid.Row="5" Grid.Column="1" x:Name="Dot" Content="," 
+               FontSize="32" />
+        <Button Grid.Row="5" Grid.Column="2" x:Name="Zero" Content="0" 
+               FontSize="32" />
+        <Button Grid.Row="5" Grid.Column="3" x:Name="Equal" Content="=" 
+               FontSize="32" />
+
+    </Grid>
+</Window>
