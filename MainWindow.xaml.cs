@@ -22,13 +22,27 @@ namespace Kalkulator
     {
         public MainWindow()
         {
-            string Wynik;
             InitializeComponent();
         }
 
+        
+        private void Fill(string symbol)
+        {
+            if (Wynik.Text == "0") Wynik.Text = symbol;
+            else Wynik.Text += symbol;
+        }
         private void Seven_Click(object sender, RoutedEventArgs e)
         {
-            
+            Fill("7");
+        }
+        private void Eight_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Nine_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

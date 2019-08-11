@@ -32,7 +32,8 @@
                    Grid.Column="2" Grid.ColumnSpan="2"
                    TextAlignment="Center" VerticalAlignment="Center" Margin="30,0"/>
 
-        <TextBlock Text="Wynik" FontSize="25" 
+        <TextBlock x:Name="Wynik"
+                    Text="0" FontSize="25"
                    Grid.Row="1" Grid.ColumnSpan="4" 
                    TextAlignment="Right" VerticalAlignment="Center" Margin="10,0"/>
         
@@ -42,26 +43,26 @@
         <Button Grid.Row="2" Grid.Column="1" x:Name="Seven" Content="7" 
                FontSize="32" Click="Seven_Click" />
         <Button Grid.Row="2" Grid.Column="2" x:Name="Eight" Content="8" 
-               FontSize="32" />
+               FontSize="32" Click="Eight_Click" />
         <Button Grid.Row="2" Grid.Column="3" x:Name="Nine" Content="9" 
-               FontSize="32" />
+               FontSize="32" Click="Nine_Click" />
         
         <Button Grid.Row="3" Grid.Column="0" x:Name="Times" Content="*" 
                FontSize="32" />
-        <Button Grid.Row="3" Grid.Column="1" x:Name="Four" Content="6" 
+        <Button Grid.Row="3" Grid.Column="1" x:Name="Four" Content="4" 
                FontSize="32" />
         <Button Grid.Row="3" Grid.Column="2" x:Name="Five" Content="5" 
                FontSize="32" />
-        <Button Grid.Row="3" Grid.Column="3" x:Name="Six" Content="4" 
+        <Button Grid.Row="3" Grid.Column="3" x:Name="Six" Content="6" 
                FontSize="32" />
 
         <Button Grid.Row="4" Grid.Column="0" x:Name="Minus" Content="-" 
                FontSize="32" />
-        <Button Grid.Row="4" Grid.Column="1" x:Name="One" Content="3" 
+        <Button Grid.Row="4" Grid.Column="1" x:Name="One" Content="1" 
                FontSize="32" />
         <Button Grid.Row="4" Grid.Column="2" x:Name="Two" Content="2" 
                FontSize="32" />
-        <Button Grid.Row="4" Grid.Column="3" x:Name="Three" Content="1" 
+        <Button Grid.Row="4" Grid.Column="3" x:Name="Three" Content="3" 
                FontSize="32" />
 
         <Button Grid.Row="5" Grid.Column="0" x:Name="Plus" Content="+" 
