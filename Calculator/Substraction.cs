@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kalkulator.Calculator
+namespace Kalkulator
 {
-    class Substraction
+    class Substraction : IOperation
     {
-        private double x;
-
+        private double x = 0;
+        public Substraction(double x) => this.x = x;
         public double Wynik(double y)
         {
             return x - y;

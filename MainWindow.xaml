@@ -37,8 +37,8 @@
                    Grid.Row="1" Grid.ColumnSpan="4" 
                    TextAlignment="Right" VerticalAlignment="Center" Margin="10,0"/>
         
-        <Button Grid.Row="2" Grid.Column="0" x:Name="Over" Content="/" 
-               FontSize="32" />
+        <Button Grid.Row="2" Grid.Column="0" x:Name="Divide" Content="/" 
+               FontSize="32" Click="Divide_Click" />
         
         <Button Grid.Row="2" Grid.Column="1" x:Name="Seven" Content="7" 
                FontSize="32" Click="Seven_Click" />
@@ -47,32 +47,32 @@
         <Button Grid.Row="2" Grid.Column="3" x:Name="Nine" Content="9" 
                FontSize="32" Click="Nine_Click" />
         
-        <Button Grid.Row="3" Grid.Column="0" x:Name="Times" Content="*" 
-               FontSize="32" />
+        <Button Grid.Row="3" Grid.Column="0" x:Name="Multiplicate" Content="*" 
+               FontSize="32" Click="Multiplicate_Click" />
         <Button Grid.Row="3" Grid.Column="1" x:Name="Four" Content="4" 
-               FontSize="32" />
+               FontSize="32" Click="Four_Click" />
         <Button Grid.Row="3" Grid.Column="2" x:Name="Five" Content="5" 
-               FontSize="32" />
+               FontSize="32" Click="Five_Click" />
         <Button Grid.Row="3" Grid.Column="3" x:Name="Six" Content="6" 
-               FontSize="32" />
+               FontSize="32" Click="Six_Click" />
 
-        <Button Grid.Row="4" Grid.Column="0" x:Name="Minus" Content="-" 
-               FontSize="32" />
+        <Button Grid.Row="4" Grid.Column="0" x:Name="Substract" Content="-" 
+               FontSize="32" Click="Substract_Click" />
         <Button Grid.Row="4" Grid.Column="1" x:Name="One" Content="1" 
-               FontSize="32" />
+               FontSize="32" Click="One_Click" />
         <Button Grid.Row="4" Grid.Column="2" x:Name="Two" Content="2" 
-               FontSize="32" />
+               FontSize="32" Click="Two_Click" />
         <Button Grid.Row="4" Grid.Column="3" x:Name="Three" Content="3" 
-               FontSize="32" />
+               FontSize="32" Click="Three_Click" />
 
         <Button Grid.Row="5" Grid.Column="0" x:Name="Plus" Content="+" 
-               FontSize="32" />
-        <Button Grid.Row="5" Grid.Column="1" x:Name="Dot" Content="," 
-               FontSize="32" />
+               FontSize="32" Click="Plus_Click" />
+        <Button Grid.Row="5" Grid.Column="1" x:Name="Comma" Content="," 
+               FontSize="32" Click="Comma_Click" />
         <Button Grid.Row="5" Grid.Column="2" x:Name="Zero" Content="0" 
                FontSize="32" />
         <Button Grid.Row="5" Grid.Column="3" x:Name="Equal" Content="=" 
-               FontSize="32" />
+               FontSize="32" Click="Equal_Click" />
 
     </Grid>
 </Window>

@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kalkulator.Calculator
+namespace Kalkulator
 {
-    class Division
+    class Division : IOperation
     {
-        private double x;
-
+        private double x=0;
+        public Division(double x) => this.x = x;
         public double Wynik(double y)
         {
             return x / y;

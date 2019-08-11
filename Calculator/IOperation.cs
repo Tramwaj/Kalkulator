@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Kalkulator
 {
-    interface Operation
+    interface IOperation
     {
         double Wynik(double y);
     }

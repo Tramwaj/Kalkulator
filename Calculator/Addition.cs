@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Kalkulator.Calculator
+namespace Kalkulator
 {
-    class Addition : Operation
+    class Addition : IOperation
     {
-      
-        private double x;
 
+        private double x = 0;
+        public Addition(double x) => this.x = x;
         public double Wynik(double y)
         {
             return x + y;
