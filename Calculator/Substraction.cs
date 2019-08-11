@@ -14,5 +14,9 @@ namespace Kalkulator
         {
             return x - y;
         }
+        public string DisplayOperation()
+        {
+            return "-";
+        }
     }
 }

@@ -68,6 +68,7 @@
     <Compile Include="Calculator\Multiplication.cs" />
     <Compile Include="Calculator\IOperation.cs" />
     <Compile Include="Calculator\Substraction.cs" />
+    <Compile Include="Display.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

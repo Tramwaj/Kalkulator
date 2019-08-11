@@ -12,6 +12,7 @@
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
         
         <Grid.RowDefinitions>
@@ -24,13 +25,17 @@
           
          </Grid.RowDefinitions>
 
-        <TextBlock Text="Pierwsza" FontSize="18" 
+        <TextBlock x:Name="First" Text="First" FontSize="18" 
                    Grid.ColumnSpan="2" 
-                   TextAlignment="Center" VerticalAlignment="Center" Margin="30,0"/>
-
-        <TextBlock Text="Druga" FontSize="18" 
-                   Grid.Column="2" Grid.ColumnSpan="2"
-                   TextAlignment="Center" VerticalAlignment="Center" Margin="30,0"/>
+                   TextAlignment="Center" VerticalAlignment="Center" Margin="3,0"/>
+        
+        <TextBlock x:Name="Operation" Text="?" FontSize="20"
+                   Grid.Column="2" 
+                   TextAlignment="Center" VerticalAlignment="Center" Margin="3" />
+        
+        <TextBlock x:Name="Second" Text="Second" FontSize="18" 
+                   Grid.Column="3" Grid.ColumnSpan="2"
+                   TextAlignment="Center" VerticalAlignment="Center" Margin="3,0"/>
 
         <TextBlock x:Name="Wynik"
                     Text="0" FontSize="25"
@@ -70,9 +75,11 @@
         <Button Grid.Row="5" Grid.Column="1" x:Name="Comma" Content="," 
                FontSize="32" Click="Comma_Click" />
         <Button Grid.Row="5" Grid.Column="2" x:Name="Zero" Content="0" 
-               FontSize="32" />
+               FontSize="32" Click="Zero_Click" />
         <Button Grid.Row="5" Grid.Column="3" x:Name="Equal" Content="=" 
                FontSize="32" Click="Equal_Click" />
+        <Button Grid.Row="2" Grid.Column="4" x:Name="Clear" Content="C"
+                FontSize="32" Grid.RowSpan="4" Click="Clear_Click" />
 
     </Grid>
 </Window>

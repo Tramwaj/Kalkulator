@@ -21,28 +21,34 @@ namespace Kalkulator
     public partial class MainWindow : Window
     {
         IOperation calc;
+        bool comma = false; // shows if the curent number already has a comma or not 
         public MainWindow()
         {
-            
+
             InitializeComponent();
         }
 
-        
+
         private void Fill(string symbol)
         {
-            if (calc == null)
-            {
-                if (Wynik.Text == "0") Wynik.Text = symbol;
-                else Wynik.Text += symbol;
-            }
-            else
-            {
-                Wynik.Text
-            }
+            if (Wynik.Text == "0") Wynik.Text = symbol;
+            else Wynik.Text += symbol;
+
+        }
+        private void Flush()
+        {
+            First.Text = Wynik.Text;
+            Wynik.Text = "0";
+            Operation.Text = calc.DisplayOperation();
+            comma = false;
+        }
+        static private void PutComma()
+        {
+
         }
         private void Seven_Click(object sender, RoutedEventArgs e)
         {
-            
+
             Fill("7");
         }
         private void Eight_Click(object sender, RoutedEventArgs e)
@@ -85,34 +91,60 @@ namespace Kalkulator
             Fill("3");
         }
 
+        private void Zero_Click(object sender, RoutedEventArgs e)
+        {
+            Fill("0");
+        }
+
         private void Divide_Click(object sender, RoutedEventArgs e)
         {
             calc = new Division(Double.Parse(Wynik.Text));
+            Flush();
         }
 
         private void Multiplicate_Click(object sender, RoutedEventArgs e)
         {
             calc = new Multiplication(Double.Parse(Wynik.Text));
+            Flush();
         }
 
         private void Substract_Click(object sender, RoutedEventArgs e)
         {
             calc = new Substraction(Double.Parse(Wynik.Text));
+            Flush();
         }
 
         private void Plus_Click(object sender, RoutedEventArgs e)
         {
             calc = new Addition(Double.Parse(Wynik.Text));
+            Flush();
         }
 
         private void Comma_Click(object sender, RoutedEventArgs e)
         {
+            if (!comma)
+            {
+                Wynik.Text += ",";
+                comma = true;
+            }
 
         }
 
         private void Equal_Click(object sender, RoutedEventArgs e)
         {
+            if (calc != null)
+            {
+                Second.Text = Wynik.Text;
+                Wynik.Text = calc.Wynik(Double.Parse(Second.Text)).ToString();
+            }
+        }
 
+        private void Clear_Click(object sender, RoutedEventArgs e)
+        {
+            First.Text = "0";
+            Second.Text = "0";
+            Wynik.Text = "0";
+            calc = null;
         }
     }
 }
