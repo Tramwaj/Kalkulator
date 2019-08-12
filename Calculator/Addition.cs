@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace Kalkulator
 {
-    class Addition : IOperation
+    class Addition : Operation
     {
 
         private double x = 0;
-        public Addition(double x) => this.x = x;
-        public double Wynik(double y)
+        public Addition(double x)
+        {
+            this.x = x;
+            Symbol = "+";
+        }
+        public override double Wynik(double y)
         {
             return x + y;
         }
-        public string DisplayOperation()
-        {
-            return "+";
-        }
+       
     }
 }

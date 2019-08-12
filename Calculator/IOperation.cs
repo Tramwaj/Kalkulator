@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace Kalkulator
 {
-    interface IOperation
+    
+    public abstract class Operation
     {
-        double Wynik(double y);
-        string DisplayOperation();
+        protected string Symbol = "";
+        public abstract double Wynik(double y);
+        public string DisplayOperation()
+        {
+            return Symbol;
+        }
     }
 }
