@@ -20,7 +20,7 @@ namespace Kalkulator
     /// </summary>
     public partial class MainWindow : Window
     {
-        IOperation calc;
+        Operation calc;
         bool comma = false; // shows if the curent number already has a comma or not 
         public MainWindow()
         {
@@ -40,6 +40,7 @@ namespace Kalkulator
             First.Text = Wynik.Text;
             Wynik.Text = "0";
             Operation.Text = calc.DisplayOperation();
+            Second.Text = "0";
             comma = false;
         }
         static private void PutComma()
