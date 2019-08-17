@@ -20,7 +20,7 @@ namespace Kalkulator
     /// </summary>
     public partial class MainWindow : Window
     {
-        Operation calc;
+        TwoComponentOperation twoComponentOperation;
         bool comma = false; // shows if the curent number already has a comma or not 
         public MainWindow()
         {
@@ -39,7 +39,7 @@ namespace Kalkulator
         {
             First.Text = Wynik.Text;
             Wynik.Text = "0";
-            Operation.Text = calc.DisplayOperation();
+            Operation.Text = twoComponentOperation.DisplayOperation();
             Second.Text = "0";
             comma = false;
         }
@@ -99,25 +99,25 @@ namespace Kalkulator
 
         private void Divide_Click(object sender, RoutedEventArgs e)
         {
-            calc = new Division(Double.Parse(Wynik.Text));
+            twoComponentOperation = new Division(Double.Parse(Wynik.Text));
             Flush();
         }
 
         private void Multiplicate_Click(object sender, RoutedEventArgs e)
         {
-            calc = new Multiplication(Double.Parse(Wynik.Text));
+            twoComponentOperation = new Multiplication(Double.Parse(Wynik.Text));
             Flush();
         }
 
         private void Substract_Click(object sender, RoutedEventArgs e)
         {
-            calc = new Substraction(Double.Parse(Wynik.Text));
+            twoComponentOperation = new Substraction(Double.Parse(Wynik.Text));
             Flush();
         }
 
         private void Plus_Click(object sender, RoutedEventArgs e)
         {
-            calc = new Addition(Double.Parse(Wynik.Text));
+            twoComponentOperation = new Addition(Double.Parse(Wynik.Text));
             Flush();
         }
 
@@ -133,10 +133,11 @@ namespace Kalkulator
 
         private void Equal_Click(object sender, RoutedEventArgs e)
         {
-            if (calc != null)
+            if (twoComponentOperation != null)
             {
                 Second.Text = Wynik.Text;
-                Wynik.Text = calc.Wynik(Double.Parse(Second.Text)).ToString();
+                Wynik.Text = twoComponentOperation.Wynik(Double.Parse(Second.Text)).ToString();
+                History.Text += "\n" + twoComponentOperation.TextForHistory() + " = " + Wynik.Text;
             }
         }
 
@@ -145,7 +146,7 @@ namespace Kalkulator
             First.Text = "0";
             Second.Text = "0";
             Wynik.Text = "0";
-            calc = null;
+            twoComponentOperation = null;
         }
     }
 }

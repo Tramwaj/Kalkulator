@@ -43,11 +43,10 @@
                     Text="0" FontSize="25"
                    Grid.Row="1" Grid.ColumnSpan="4" 
                    TextAlignment="Right" VerticalAlignment="Center" Margin="10,0"/>
-        <Border BorderThickness="1" BorderBrush="DarkGray">
-            <TextBlock x:Name="History" Text="History" FontSize="12"
-                   Grid.Row="0" Grid.Column="5" Grid.RowSpan="6"  />
+        <Border Grid.Row="0" Grid.Column="5" Grid.RowSpan="6"
+                BorderThickness="1" BorderBrush="DarkGray">
+            <TextBlock x:Name="History" Text="History" FontSize="12"/>
         </Border>
-        
         <Button Grid.Row="2" Grid.Column="0" x:Name="Divide" Content="/" 
                FontSize="32" Click="Divide_Click" />
         

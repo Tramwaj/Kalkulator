@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Kalkulator
 {
-    class Addition : Operation
+    class Addition : TwoComponentOperation
     {
 
-        private double x = 0;
+       
         public Addition(double x)
         {
             this.x = x;
@@ -17,6 +17,7 @@ namespace Kalkulator
         }
         public override double Wynik(double y)
         {
+            this.y = y;
             return x + y;
         }
        

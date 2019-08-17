@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Kalkulator
 {
-    class Multiplication : Operation
+    class Multiplication : TwoComponentOperation
     {
-        private double x=0;
+        
         public Multiplication(double x)
         {
             this.x = x;
@@ -17,6 +17,7 @@ namespace Kalkulator
 
         public override double Wynik(double y)
         {
+            this.y = y;
             return x * y;
         }
         

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Kalkulator
 {
-    class Substraction : Operation
+    class Substraction : TwoComponentOperation
     {
-        private double x = 0;
+        
         public Substraction(double x)
         {
             this.x = x;
@@ -16,6 +16,7 @@ namespace Kalkulator
         }
         public override double Wynik(double y)
         {
+            this.y = y;
             return x - y;
         }
        

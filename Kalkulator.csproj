@@ -66,7 +66,7 @@
     <Compile Include="Calculator\Addition.cs" />
     <Compile Include="Calculator\Division.cs" />
     <Compile Include="Calculator\Multiplication.cs" />
-    <Compile Include="Calculator\IOperation.cs" />
+    <Compile Include="Calculator\Operation.cs" />
     <Compile Include="Calculator\Substraction.cs" />
     <Compile Include="Display.cs" />
     <Compile Include="MainWindow.xaml.cs">
